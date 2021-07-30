@@ -102,7 +102,7 @@
             if ($vardas==$elementas["vardas"] && $slaptazodis==$elementas["slaptazodis"]) {
                 $teisingasDomuo= true; 
                 $laikinasis_vardas=$elementas["vardas"]; 
-                $laikinasis_vardas=$elementas["teises"]; 
+                $laikinasis_teises=$elementas["teises"]; 
                 break; 
             }
         }
@@ -110,7 +110,7 @@
         if ($teisingasDomuo) {
            // echo $elementas["vardas"];
            // echo $elementas["pavarde"];
-            echo "sveikas atvykes," . $elementas["vardas"];
+           echo "Sveikas atvykes ". $laikinasis_vardas ." ". $laikinasis_teises;
             // coockies dedamas po to kai 
             //prisijungtimas yra sekmingas- prisijungimas isaugomas nurodomam laikui
             setcookie("prisijungti", $laikinasis_vardas, time()+3600*24, "/"); 
